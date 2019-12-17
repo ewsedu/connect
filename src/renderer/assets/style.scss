@@ -1,0 +1,51 @@
+// 自定义样式文件
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #efefef;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  opacity: .35;
+  background-color: #2494F2;
+}
+
+.show-scroll {
+  &:hover {
+    &::-webkit-scrollbar {
+      width: 4px !important;
+    }
+  }
+}
+
+.spin-loading {
+  animation: spin-loading 1s linear infinite;
+}
+
+@keyframes spin-loading {
+  from {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
